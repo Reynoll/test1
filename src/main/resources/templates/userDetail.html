@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <div>学生编号：<span th:text="${student.id}" /> <br>-->
+<!--    学生年龄：<span th:text="${student.age}" /> <br>-->
+<!--    学生姓名：<span th:text="${student.name}" /></div> <br>-->
+<!--<a th:href="@{/test(id=${student.id},name=${student.name},age=${student.age})}">路径表达式</a>-->
+<select>
+    <option th:each="stu:${stus}" th:text="${stu.name}"></option>
+</select>
+<input type="checkbox" th:each="stu:${stus}" th:text="${stu.name}">
+</body>
+</html>
